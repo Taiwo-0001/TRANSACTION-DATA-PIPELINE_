@@ -5,12 +5,7 @@ from datetime import datetime
 with open("data/messy_transactions.csv", "r") as file:
     transactions = list(csv.DictReader(file))
 
-
-# Keep track of invalid transactions
 invalid_transactions = []
-
-
-# Remove duplicate transactions
 unique_transactions = {}
 
 for transaction in transactions:
@@ -24,7 +19,7 @@ for transaction in transactions:
 
         current = unique_transactions[transaction_id]
 
-        # Keep the transaction with more complete information
+    
         current_filled = sum(
             1 for value in current.values() if value.strip()
         )
@@ -40,14 +35,13 @@ for transaction in transactions:
 transactions = list(unique_transactions.values())
 
 
-# Clean transactions
 cleaned_transactions = []
 
 for transaction in transactions:
 
     transaction["type"] = transaction["type"].lower()
 
-    # Check transaction type
+    
     if transaction["type"] not in ["income", "expense"]:
         print("Invalid transaction type:", transaction["type"])
 
@@ -58,7 +52,7 @@ for transaction in transactions:
 
         continue
 
-    # Clean and check amount
+   
     try:
         amount = float(
             transaction["amount"]
@@ -78,17 +72,15 @@ for transaction in transactions:
 
         continue
 
-    # Check description
     if not transaction["description"].strip():
         print("Missing description")
         transaction["description"] = "Unknown"
 
-    # Check category
+    
     if not transaction["category"].strip():
         print("Missing category")
         transaction["category"] = "Other"
 
-    # Clean and check date
     try:
         date = datetime.strptime(transaction["date"], "%Y-%m-%d")
 
@@ -108,15 +100,13 @@ for transaction in transactions:
 
     transaction["date"] = date.strftime("%Y-%m-%d")
 
-    # Add valid transaction to cleaned list
+    
     cleaned_transactions.append(transaction)
 
 
-# Replace transactions with cleaned transactions
 transactions = cleaned_transactions
 
 
-# Calculate total income
 total_income = 0
 
 for transaction in transactions:
@@ -126,7 +116,6 @@ for transaction in transactions:
 print("Total income:", total_income)
 
 
-# Calculate total expenses
 total_expenses = 0
 
 for transaction in transactions:
@@ -136,13 +125,12 @@ for transaction in transactions:
 print("Total expenses:", total_expenses)
 
 
-# Calculate balance
 balance = total_income - total_expenses
 
 print("Balance:", balance)
 
 
-# Calculate expenses by category
+
 expenses_by_category = {}
 
 for transaction in transactions:
@@ -155,7 +143,6 @@ for transaction in transactions:
         expenses_by_category[category] += transaction["amount"]
 
 
-# Save cleaned data to JSON
 output = {
     "transactions": transactions,
     "summary": {
