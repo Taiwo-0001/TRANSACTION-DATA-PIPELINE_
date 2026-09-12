@@ -1,0 +1,102 @@
+{
+    "transactions": [
+        {
+            "id": "txn_101",
+            "date": "2026-09-01",
+            "description": "Instagram Sale",
+            "amount": 25000.0,
+            "type": "income",
+            "category": "Sales"
+        },
+        {
+            "id": "txn_102",
+            "date": "2026-09-01",
+            "description": "Facebook Ads",
+            "amount": 5000.0,
+            "type": "expense",
+            "category": "Marketing"
+        },
+        {
+            "id": "txn_103",
+            "date": "2026-09-03",
+            "description": "Client Payment",
+            "amount": 85000.0,
+            "type": "income",
+            "category": "Services"
+        },
+        {
+            "id": "txn_104",
+            "date": "2026-09-04",
+            "description": "Uber",
+            "amount": 4500.0,
+            "type": "expense",
+            "category": "Transport"
+        },
+        {
+            "id": "txn_105",
+            "date": "2026-09-05",
+            "description": "Unknown",
+            "amount": 12000.0,
+            "type": "expense",
+            "category": "Operations"
+        },
+        {
+            "id": "txn_106",
+            "date": "2026-09-06",
+            "description": "Online Store Sale",
+            "amount": 45000.0,
+            "type": "income",
+            "category": "Sales"
+        },
+        {
+            "id": "txn_108",
+            "date": "2026-09-08",
+            "description": "Consulting Payment",
+            "amount": 65000.0,
+            "type": "income",
+            "category": "Other"
+        },
+        {
+            "id": "txn_109",
+            "date": "2026-09-08",
+            "description": "Consulting Payment",
+            "amount": 65000.0,
+            "type": "income",
+            "category": "Services"
+        },
+        {
+            "id": "txn_110",
+            "date": "2026-09-09",
+            "description": "Unknown Transaction",
+            "amount": -5000.0,
+            "type": "expense",
+            "category": "Other"
+        }
+    ],
+    "summary": {
+        "total_income": 285000.0,
+        "total_expenses": 16500.0,
+        "balance": 268500.0,
+        "expenses_by_category": {
+            "Marketing": 5000.0,
+            "Transport": 4500.0,
+            "Operations": 12000.0,
+            "Other": -5000.0
+        },
+        "invalid_transactions": [
+            {
+                "id": "txn_107",
+                "reason": "Invalid date"
+            },
+            {
+                "id": "txn_111",
+                "reason": "Invalid amount"
+            },
+            {
+                "id": "txn_112",
+                "reason": "Invalid transaction type"
+            }
+        ],
+        "transactions_processed": 9
+    }
+}

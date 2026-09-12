@@ -1,0 +1,73 @@
+{
+    "transactions": [
+        {
+            "id": "txn_001",
+            "date": "2026-09-01",
+            "description": "Instagram Sale",
+            "amount": "25000",
+            "type": "income",
+            "category": "Sales"
+        },
+        {
+            "id": "txn_002",
+            "date": "2026-09-02",
+            "description": "Facebook Ads",
+            "amount": "5000",
+            "type": "expense",
+            "category": "Marketing"
+        },
+        {
+            "id": "txn_003",
+            "date": "2026-09-03",
+            "description": "Client Payment",
+            "amount": "85000",
+            "type": "income",
+            "category": "Services"
+        },
+        {
+            "id": "txn_004",
+            "date": "2026-09-04",
+            "description": "Uber",
+            "amount": "4500",
+            "type": "expense",
+            "category": "Transport"
+        },
+        {
+            "id": "txn_005",
+            "date": "2026-09-05",
+            "description": "Office Supplies",
+            "amount": "12000",
+            "type": "expense",
+            "category": "Operations"
+        },
+        {
+            "id": "txn_006",
+            "date": "2026-09-06",
+            "description": "Online Store Sale",
+            "amount": "45000",
+            "type": "income",
+            "category": "Sales"
+        },
+        {
+            "id": "txn_007",
+            "date": "2026-09-07",
+            "description": "Internet Subscription",
+            "amount": "8500",
+            "type": "expense",
+            "category": "Utilities"
+        },
+        {
+            "id": "txn_008",
+            "date": "2026-09-08",
+            "description": "Consulting Payment",
+            "amount": "65000",
+            "type": "income",
+            "category": "Services"
+        }
+    ],
+    "summary": {
+        "total_income": 220000.0,
+        "total_expenses": 30000.0,
+        "balance": 190000.0
+    }
+}
