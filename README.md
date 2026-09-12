@@ -53,7 +53,8 @@ I had some problems with the messy data, so I did the following:
 5. messy_data.py: cleans and processes the messy transaction data.
 
 ## Testing
-I tested the programs by running them from the terminal and checking the output.
-
-I also checked that the messy data was cleaned correctly and that invalid transactions were identified.
+I wrote three simple tests to check the total income, total expenses and balance.
+I ran the tests using:
+python -m pytest
+The result was: 3 passed.
 
