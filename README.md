@@ -15,13 +15,13 @@ output/messy_transactions.json
 
 ## Data Validation
 The validation rule for the transactions are the following:
- The date must be valid.
- There is no empty description.
- There are no invalid amounts.
- Transaction type must be one of the two expected: 'expense' or 'income'. 
- Transaction ID is used when calculating duplicate transactions. 
- If a transaction has a problem that makes it invalid, it is not added to the cleaned transactions.
-The invalid transaction is added to the invalid_transactions section of the output.
+1. The date must be valid.
+2. There is no empty description.
+3. There are no invalid amounts.
+4. Transaction type must be one of the two expected: 'expense' or 'income'. 
+5. Transaction ID is used when calculating duplicate transactions. 
+6. If a transaction has a problem that makes it invalid, it is not added to the cleaned transactions.
+7. The invalid transaction is added to the invalid_transactions section of the output.
 
 ## Data Cleaning
 I had some problems with the messy data, so I did the following:
