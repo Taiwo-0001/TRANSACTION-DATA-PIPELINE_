@@ -18,7 +18,7 @@ The validation rule for the transactions are the following:
 1. The date must be valid.
 2. There is no empty description.
 3. There are no invalid amounts.
-4. Transaction type must be one of the two expected: 'expense' or 'income'. 
+4. Transaction type must be one of the two expected expense or income. 
 5. Transaction ID is used when calculating duplicate transactions. 
 6. If a transaction has a problem that makes it invalid, it is not added to the cleaned transactions.
 7. The invalid transaction is added to the invalid_transactions section of the output.
